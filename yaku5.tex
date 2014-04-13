@@ -1,0 +1,114 @@
+%\documentstyle[epsf,twocolumn]{jarticle}       %LaTeX2.09仕様
+\documentclass[twocolumn]{jarticle}     %pLaTeX2e仕様
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  基本 バージョン
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\topmargin}{-45pt}
+%\setlength{\oddsidemargin}{0cm} 
+\setlength{\oddsidemargin}{-7.5mm}
+%\setlength{\evensidemargin}{0cm} 
+\setlength{\textheight}{24.1cm}
+%setlength{\textheight}{25cm} 
+\setlength{\textwidth}{17.4cm}
+%\setlength{\textwidth}{172mm} 
+\setlength{\columnsep}{11mm}
+
+
+%【節がかわるごとに (1.1) (1.2) … (2.1) (2.2)と数式番号をつけるとき】
+%\makeatletter
+%\renewcommand{\theequation}{%
+%\thesection.\arabic{equation}} %\@addtoreset{equation}{section}
+%\makeatother
+
+%\renewcommand{\arraystretch}{0.95} 行間の設定
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}   %pLaTeX2e仕様 (要\documentstyle ->\documentclass)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\twocolumn[
+\noindent
+
+\hspace{1em}
+%日付
+知能情報工学英語演習　2014年4月1日 (金)
+\hfill
+\ 2140104059\ 文原 宏敏
+
+\vspace{2mm}
+
+\hrule
+
+\begin{center}
+{\Large \bf　Analysis}%タイトル
+\end{center}
+
+\hrule
+\vspace{3mm}
+]
+
+% ここから 文章 Start!
+\section{目次}
+%卒論でやったみたいに目次作れる？
+\section{はじめに}
+%%%%%%%%%%%%%%%%%%%%p.1%%%%%%%%%%%%%%%%%%%%
+
+解析によって，正しく完璧で一貫した明白なシステムのモデルが得られる．
+
+開発者は要求獲得および，より詳細な境界条件，
+例外事例の調査の間に作られた要求仕様を形式化する．
+
+たとえ誤りや曖昧な部分が見つかっても，
+開発者は要求仕様を正しく，明瞭に確認する．%validate:確認する？
+
+要求仕様を変更しなければならない場合や，付加情報を収集しなければならない場合に，
+顧客とユーザはたいていこのアクティビティに関係付けられる
+
+オブジェクト指向における解析では，開発者はモデルを構築する．
+アプリケーションの概念%？ ドメイン
+を説明するモデル
+
+例えば，時計の解析モデルは時計がどのように現在時刻を表すか説明する．
+:すなわち，時計はうるう年を知っているのか？%know
+曜日は？ 月の満ち欠けは？
+
+解析モデルはその時%そのようにして？
+どのようにしてアクターやシステムが相互作用して
+アプリケーションの概念モデルを操作するかを
+説明するために拡張される．
+:時計の所有者はどのようにして曜日をリセットするのか？
+
+開発者は，
+非機能要件とともに
+上位レベルの設計(6章)の間に%?
+開発されたシステムの構成に備えて
+解析モデルを使う．
+
+この章では，より詳細は解析%分析？活動
+について議論する．%述べる？
+
+オブジェクトの同一性，%?
+振る舞い，関係，分類，構成%構造？組織化？
+に注目する．%焦点を当てる．
+
+複数チームでの開発プロジェクトという状況%背景，場面？
+における解析に関連した管理問題について説明する．
+
+最後に，より詳細な解析問題や，ARENA ケーススタディを使用した際の
+トレードオフについて議論する．%述べる？
+
+%%%%%%%%%%%%%%%%%%%%p.2%%%%%%%%%%%%%%%%%%%%
+
+\subsection{はじめに:錯視}%5.1節
+1915年，Rubin%ルービン？
+は図5-1のような図を示した．
+
+%タブ
+%https://translate.google.co.jp/?hl=ja&tab=wT#en/ja/|http://ejje.weblio.jp/content/Introduction%3A+An+Optical+Illusion
+
+
+\end{document}
