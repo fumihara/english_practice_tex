@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-130605-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.12.6)  14 APR 2014 17:02
+This is e-pTeX, Version 3.1415926-p3.4-130605-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.12.6)  15 APR 2014 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -98,10 +98,10 @@ Overfull \hbox (24.18492pt too wide) in paragraph at lines 156--157
 Here is how much of TeX's memory you used:
  579 strings out of 493813
  6691 string characters out of 6153891
- 66044 words of memory out of 5000000
+ 67044 words of memory out of 5000000
  4103 multiletter control sequences out of 15000+600000
  9655 words of font info for 39 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  25i,4n,19p,182b,306s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on yaku5.dvi (2 pages, 5948 bytes).
+Output written on yaku5.dvi (2 pages, 7044 bytes).
