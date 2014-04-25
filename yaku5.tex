@@ -427,8 +427,86 @@ IncidentFormはReportEmergencyユースケース内で
 初めに，
 私達はReportEmergencyユースケースのコントロールフローと
 各アクターのコントロールオブジェクトをモデル化する．:%
-FieldOfficer用のReportEmergencyControlや
-Dispatcher用のManageEmergency-Control
+このアクターとは，FieldOfficer用のReportEmergencyControlや
+Dispatcher用のManageEmergency-Controlのそれぞれのものである．(表5-4)%このアクター？ それぞれ？
+%The decision to model
+ReportEmergencyユースケースと2つのコントロールオブジェクトの
+コントロールフローをモデル化するという決定は%決定？決断？decision
+FieldOfficerStationやDispatcherStationが実際に
+非同時性のリンクで通信しているサブシステムである%通信？commu
+という認識から生じる．%認識？ノーレッジ
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%表っぽいの作る
+%%%%%%%%%%%%%%%Heuristics for identifying control objects
+%%%%%%%%%%%%%%%
+%In modeling the ReportEmergency
+ReportEmergencyユースケースをモデル化する際，
+私達はエンティティ，バウンダリ，コントロールオブジェクトを用いて
+同じ機能性をモデル化した．
+
+
+%%%%%%%%%%%%%%%%%%%%p.185%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%表5-4
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+
+\subsubsection{ユースケースからシーケンス図のオブジェクトへの対応付け}%5.4.4節 %対応付け，はそのままマッピングでもいいかなぁ
+シーケンス図は，ユースケースとオブジェクトを結びつける．
+これはユースケース(もしくはシナリオ)の振る舞いがどのように
+関連オブジェクトに分配されているかを示す．
+%In this section, we model
+本章では，ユースケースを理解するのに必要な
+オブジェクト間の相互作用のシーケンスをモデル化する．
+図5-8から図5-10はReportEmergencyユースケースに関連付けられたシーケンス図である．
+
+
+%%%%%%%%%%%%%%%%%%%%p.186%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-8.eps}
+\end{center}
+\caption{ReportEmergencyユースケースのシーケンス図}%forだけど「の」って訳していいのか？
+\end{figure}
+%In general, the second
+一般にシーケンス図の2列目は，ユースケースを始めるためにアクターが相互作用する
+バウンダリオブジェクトを表している(例:ReportEmergencyButton)．
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%以降の3列目とかも書かねば
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%In Figure 5-9, we discover
+図5-9において，表5-2におけるReportEmergencyユースケースの最初の検査%検査？
+の際に忘れていたエンティティオブジェクトであるAcknowledgmentを発見する．
+
+
+%%%%%%%%%%%%%%%%%%%%p.187%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-9.eps}
+\end{center}
+\caption{ReportEmergencyユースケースのシーケンス図(図5-8の続き)}
+\end{figure}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-10.eps}
+\end{center}
+\caption{ReportEmergencyユースケースのシーケンス図(図5-9の続き)}
+\end{figure}
+%By constructing sequence
+シーケンス図を構築することで，
+オブジェクト間の相互作用の状態%？ order
+をモデル化するだけでなく，ユースケースの振る舞いも分配する．%分配？
+
 
 
 \end{document}
