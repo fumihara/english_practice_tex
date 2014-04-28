@@ -458,7 +458,7 @@ ReportEmergencyユースケースをモデル化する際，
 \subsubsection{ユースケースからシーケンス図のオブジェクトへの対応付け}%5.4.4節 %対応付け，はそのままマッピングでもいいかなぁ
 シーケンス図は，ユースケースとオブジェクトを結びつける．
 これはユースケース(もしくはシナリオ)の振る舞いがどのように
-関連オブジェクトに分配されているかを示す．
+関連オブジェクトに分配されているかを示す．%関連オブジェクト？
 %In this section, we model
 本章では，ユースケースを理解するのに必要な
 オブジェクト間の相互作用のシーケンスをモデル化する．
@@ -496,6 +496,7 @@ ReportEmergencyユースケースをモデル化する際，
 \end{center}
 \caption{ReportEmergencyユースケースのシーケンス図(図5-8の続き)}
 \end{figure}
+%
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=6cm,clip]{5-10.eps}
@@ -506,6 +507,60 @@ ReportEmergencyユースケースをモデル化する際，
 シーケンス図を構築することで，
 オブジェクト間の相互作用の状態%？ order
 をモデル化するだけでなく，ユースケースの振る舞いも分配する．%分配？
+
+
+%%%%%%%%%%%%%%%%%%%%p.188%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-11.eps}
+\end{center}
+\caption{正確なReportEmergencyユースケース}%正確な？Refind
+\end{figure}
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%表5-5
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%Sharing operations across
+ユースケース間でオペレーションを共有することで，
+開発者は一貫性を高めるために要求仕様の冗長性を除去できる．
+%In analysis, sequence
+分析において，シーケンス図は
+新しい関連オブジェクトや不足している動作を
+特定するのに使用される．%特定するものである？are used to？
+
+
+%%%%%%%%%%%%%%%%%%%%p.189%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%表っぽいの作る
+%%%%%%%%%%%%%%%Heuristics for drawing sequence diagrams
+%%%%%%%%%%%%%%%
+
+\subsubsection{オブジェクトとCRCカード間の相互作用のモデル化}%5.4.5節 %http://ja.wikipedia.org/wiki/CRC%E3%82%AB%E3%83%BC%E3%83%89
+
+%An alternative for
+オブジェクト間の相互作用を確認する%確認？identify
+ための代替案として，CRCカードがある(Beck \& Cunningham,1989).%カニンガム？
+%CRC cards can be
+CRCカードは
+チームとの会議%会議？ セッション
+をモデル化する際に使われることもある．
+参加者，通常開発者やアプリケーションドメインの専門家たちだが，%mix……集団？
+彼らはシナリオを見直し%見直す？検討する？go through
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-12.eps}
+\end{center}
+\caption{ReportEmergencyControlとインシデントクラスのCRCカードの例}%インシデントクラス？？？？
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%p.189%%%%%%%%%%%%%%%%%%%%
 
 
 
