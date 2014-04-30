@@ -560,7 +560,87 @@ CRCカードは
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%p.189%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%p.190%%%%%%%%%%%%%%%%%%%%
+
+
+%CRC cards and sequence
+CRCカードとシーケンス図は，同じタイプの作業をサポートする%タイプ？サポート？
+2つの異なる表現である．
+
+\subsubsection{関連の定義}%5.4.6節 %idenify？特定？定義？
+%Whereas sequence
+開発者は，シーケンス図によって時間に伴うオブジェクト間の相互作用を%over time伴う？
+表現できるが，一方でクラス図によってオブジェクトの依存関係を記述できる．
+%An association shows
+関連は，2つ以上のクラス間の関係を示す．
+%Associations have several properties:
+関連にはいくつかの特徴がある．:
+\begin{itemize}
+ \item 名前:2つのクラス間の関連を記述するためのもの(例，図5-13)．関連名は任意であり，
+ グローバルに一意である必要はない．
+ \item 役割:それぞれの終端%each end終端？末端？
+ において，関連に関するそれぞれのクラスの機能を定義している．%名詞節，identify定義している
+ \item 多重度:各終端において，持ちうる%持ちうる？存在しうる？
+ インスタンスの数を定義している(例，%%%%%%%%%%%%%%%%)．
+\end{itemize}
+%
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-13.eps}
+\end{center}
+\caption{EmergencyReportクラスとFieldOfficerクラス間の関係の例}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%p.191%%%%%%%%%%%%%%%%%%%%
+
+
+%Initially, the associations
+初めのうちは，
+それらがアプリケーションドメインについての更なる情報を表しているように，
+エンティティオブジェクト間の関連は
+大部分が重要だ．%asの訳
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%表っぽいの作る
+%%%%%%%%%%%%%%%Heuristics for identifying associations
+%%%%%%%%%%%%%%%
+%The object model will
+もし開発者が動詞句の検査のあとに定義する%動詞句？検査？identify定義？？？？？？？？？？？
+すべての関連を含めれば，
+オブジェクトモデルは最初にあまりにも多くの関連を含むだろう．
+%Most entity objects
+大部分のエンティティオブジェクトは，
+それらにアクセスするためにアクターに使用される特定の特性を持っている．%identifying特定の特性？
+
+
+%%%%%%%%%%%%%%%%%%%%p.192%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-14.eps}
+\end{center}
+\caption{冗長な関連を削除}
+\end{figure}
+
+\subsubsection{集約の定義}%5.4.6節 %idenify？特定？
+%Aggregations are
+集約は，全体と部分の関係を表す関連の特殊なタイプである．
+%例えば，
+%There are two types
+集約には2種類あり，構成と共有である．
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=6cm,clip]{5-15.eps}
+\end{center}
+\caption{集約と構成}%compositions，構成
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%p.193%%%%%%%%%%%%%%%%%%%%
 
 
 
