@@ -540,14 +540,28 @@ ReportEmergencyControlクラスにcreateメッセージを送信する．
 \caption{ReportEmergencyユースケースのシーケンス図}%forだけど「の」って訳していいのか？
 \end{figure}
 
-%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%以降の3列目とかも書かねば
-%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
+一般に，シーケンス図の2列目は
+アクタがユースケースを開始するために相互作用する
+バウンダリオブジェクトを表す(例:ReportEmergencyButton)．
+3列目は，ユースケースの残りの部分を管理する
+コントロールオブジェクトである(例:ReportEmergencyControl)．
+それ以降は，コントロールオブジェクトは
+他のバウンダリオブジェクトを作成し，
+他のコントロールオブジェクトとも相互作用する(例:ManageEmergencyControl)．
 
+図5-9で，ReportEmergencyユースケース(表5-2)を最初に調査%検査？
+した際には忘れていた，エンティティオブジェクトであるAcknowledgmentを発見する．
+AcknowledgmentオブジェクトはAcknowledgmentNoticeとは異なる．
+Acknowledgmentは関連する情報を保持し，
+バウンダリオブジェクトであるAcknowledgmentNoticeより以前に作成される．
+Acknowledgmentオブジェクトを記述する際，
+元のReportEmergencyユースケース(図5-7で記述された)
+が不完全であることにも気づく．
+Acknowledgmentの存在に言及するだけで，
+それと関連する情報は記述しない．
+この場合Acknowledgmentでどんな情報が必要とされるか定義するために，
+開発者はクライアントからの説明を必要とする．
 %%%%%%%%%%%%%%%%%%%%p.187%%%%%%%%%%%%%%%%%%%%
-
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=6cm,clip]{5-9.eps}
@@ -561,6 +575,18 @@ ReportEmergencyControlクラスにcreateメッセージを送信する．
 \end{center}
 \caption{ReportEmergencyユースケースのシーケンス図(図5-9の続き)}
 \end{figure}
+そのような説明を得た後，
+Acknowledgmentオブジェクトが分析モデル(表5-5)に追加され，
+ReportEmergencyユースケースは
+追加の情報(図5-11)を含めるために明確化される．
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%以降の3列目とかも書かねば
+%%%%%%%%%%%%%%%…………ってなんだっけ，忘れた．何を訳すんだっけ
+%%%%%%%%%%%%%%%
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%p.188%%%%%%%%%%%%%%%%%%%%
 
