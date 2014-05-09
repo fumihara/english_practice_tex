@@ -44,7 +44,7 @@
 %日付
 知能情報工学英語演習　2014年5月9日 (金)
 \hfill
-\ ********59\ fumihara%%%%%%%%%%%%%あとで変更%%%%%%%%%%%%
+\ 2140104059\ 文原 宏敏%%%%%%%%%%%%%あとで変更%%%%%%%%%%%%
 
 \vspace{2mm}
 
@@ -95,13 +95,11 @@
 は図5-1のような図を示した．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=4cm,clip]{5-1.eps}
+\includegraphics[width=3cm,clip]{5-1.eps}
 \end{center}
 \caption{曖昧さ:何が見えるか}
 \end{figure}
-黒い部分は2つの顔に，白い部分は花瓶に見え，一旦両方の形をそれぞれ認識できれば，
-顔と花瓶を簡単に行き来できる．
-
+黒い部分は2つの顔に，白い部分は花瓶に見えるが，
 もし図5-1の絵が要求仕様であれば，どちらのモデルを作成するべきか．
 単位の明記されていない量や時間帯のない時刻が曖昧であるように，%(フィートかマイルか，タイムゾーン)
 複数の意味を持つような仕様は，自然言語に特有の不正確さや
@@ -138,7 +136,7 @@
 延期する傾向がある．
 概念的知識や技術的知識の欠如，もしくは単にユーザと開発者間の意見の相違
 によって決断が難しい場合もある．
-決定を先送りすることで，プロジェクトを滑らかに進行させ，
+決定を先送りすることでプロジェクトを滑らかに進行させ，
 現実や仲間と衝突するのを避けることができる．
 残念ながら，最終的に困難な決断はしなければならず，
 それはしばしばテストの際であったり，
@@ -160,7 +158,7 @@
 \end{figure}
 前章では，どのようにユーザから要求を引き出すか，
 それらをユースケースやシナリオで記述するかを説明した．
-本節では，どのように機能モデルを洗練させ，
+本章では，どのように機能モデルを洗練させ，
 オブジェクトモデルや動的モデルを得るかを説明する．
 これにより細部が分析モデルに加えられるため，正確で完全な仕様につながる．
 分析に関連する管理作業について説明することで，本章の結論とする．%管理作業？
@@ -181,25 +179,17 @@
 システムに操作される個々の概念やそれらの性質および関係に焦点を当てる．
 UMLのクラス図で示される分析対象モデルはクラス，属性，操作を含んでおり，
 主要な概念をユーザに見えるようにした視覚的な辞典である．
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%ここから，パラグラフリーディング試してる%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 動的モデルはシステムの挙動に注目するもので，シーケンス図やステートマシンで描かれる．
 シーケンス図は，単一のユースケースにおけるオブジェクトの組の間の相互作用を表し，
-ステート?マシンは，単一のオブジェクト(または密接に結びついたオブジェクト群)の振る舞いを表す．
+ステートマシンは，単一のオブジェクト(または密接に結びついたオブジェクト群)の振る舞いを表す．
 動的モデルは個々のクラスに責任を割り当て，
 その過程で解析対象モデルに追加される新しいクラスや関連，
 属性を確認するためのものである．
 
-分析対象モデルか動的モデルのどちらかを使用する場合，%いずれかを操作する場合？
+分析対象モデルと動的モデルのどちらかを使用する場合，%いずれかを操作する場合？
 これらのモデルはユーザレベルでの概念を表すものであり，
-実際のソフトウェアのクラスやコンポーネントを表すものではないことを
-覚えておかなければならない．
+実際のソフトウェアのクラスやコンポーネントを表すものではない．
 %%%%%%%%%%%%%%%%%%%%p.177%%%%%%%%%%%%%%%%%%%%
 %例えば，ユーザはこれらの概念から完全に隔離されているため，分析モデルにクラスは現れない．
 分析クラスは，後でより詳細に具体化される
@@ -208,7 +198,7 @@ UMLのクラス図で示される分析対象モデルはクラス，属性，操作を含んでおり，
 %%%%%%%%%%%%%%%%%%%%p.177%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=7cm,clip]{5-4.eps}
+\includegraphics[width=8cm,clip]{5-4.eps}
 \end{center}
 \caption{SatWatchの分析対象モデルにおけるクラスの例と反例}%
 \end{figure}
@@ -229,16 +219,16 @@ UMLのクラス図で示される分析対象モデルはクラス，属性，操作を含んでおり，
 %例がここに書いてある%%%%%%%%%%%%%%%%%%%%%%%%
 
 型の異なるオブジェクトを区別するために，
-UMLは，開発者がそのようなメタ情報をモデリングの要素へ付加できるように，
-ステレオタイプの機構を提供する．%そのような？
+UMLは開発者がメタ情報をモデリングの要素へ付加できるように
+ステレオタイプの機構を提供する．
 例えば図5-5において，
-?control?のステレオタイプをChangeDateControlオブジェクトに添付する．
+$\ll$control$\gg$ のステレオタイプをChangeDateControlオブジェクトに添付する．
 ステレオタイプに加えて，
 明確さのために命名規則も使用し，
 構文的な基準で3種の異なるオブジェクトを区別することを推奨する．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=5cm,clip]{5-5.eps}
+\includegraphics[width=7cm,clip]{5-5.eps}
 \end{center}
 \caption{2Bwatchの例の分析クラス}%分析クラス？ 「例」の場所？
 \end{figure}
@@ -260,19 +250,19 @@ UMLを使ってのモデリングでは，
 %%%%%%%%%%%%%%%%%%%%p.179%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-6.eps}
+\includegraphics[width=8cm,clip]{5-6.eps}
 \end{center}
 \caption{汎化階層の例(UMLクラス図)}%もうちょい詳しく書く？？？？
 \end{figure}
 
 %In both cases, generalization
 いずれの場合でも，汎化と特化は概念間の継承関係を詳細にする結果となる．%修正したい
-いくつかの例では，継承関係のことを汎化-特化の関係と呼ぶ．
-本書では，「継承」という用語は関係を表すために使用し，
+いくつかの例では，継承関係のことを汎化-特化の関係と呼ぶが，
+本書では「継承」という用語は関係を表すために使用し，
 「汎化」と「特化」という用語は継承関係を発見するための作業を
 表すために使用する．
 
-\subsubsection{ユースケースからオブジェクトへの分析作業}%5.4節  %書き方変える？
+\subsection{ユースケースからオブジェクトへの分析作業}%5.4節  %書き方変える？
 本節では，要求抽出の結果生成されたユースケースやシナリオを%要求抽出？
 分析モデルに変換する作業について述べる．
 分析作業には次のようなものを含む．
@@ -281,13 +271,13 @@ UMLを使ってのモデリングでは，
  \item バウンダリオブジェクトの識別(5.4.2節)
  \item コントロールオブジェクトの識別(5.4.3節)
  \item ユースケースからシーケンス図のオブジェクトへの対応付け(5.4.4節)
- \item (5.4.5節)
- \item (5.4.6節)
- \item (5.4.7節)
- \item (5.4.8節)
- \item (5.4.9節)
- \item (5.4.10節)
- \item (5.4.11節)
+ \item オブジェクトとCRCカード間の相互作用のモデル化(5.4.5節)
+ \item 関連の識別(5.4.6節)
+ \item 集約の識別(5.4.7節)
+ \item 属性の識別(5.4.8節)
+ \item 個々のオブジェクトの状態に依存した振る舞いのモデル化(5.4.9節)
+ \item オブジェクト間の継承関係のモデル化(5.4.10節)
+ \item 分析モデルの見直し(5.4.11節)
 \end{itemize}
 
 4章の要求抽出で説明したFRIENDの%述べた要求抽出？
@@ -299,7 +289,7 @@ ReportEmergencyユースケースに注目し，それぞれの作業を説明する．
 は分析モデルの基礎を形作っている．
 
 4章で説明したように，関連オブジェクトは
-各ユースケースの調査や候補のオブジェクトの確認%identify確認？
+各ユースケースの調査や候補オブジェクトの確認%identify確認？
 によって見つけられる．
 
 自然言語分析[Abbott, 1983]は，
@@ -327,13 +317,13 @@ ReportEmergencyユースケース(図5-7)
 \begin{table}[t]
 \caption{Abbottのヒューリスティック}
 \center
-\includegraphics[width=6cm,clip]{t5-1.eps}
+\includegraphics[width=8cm,clip]{t5-1.eps}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%p.181%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-7.eps}
+\includegraphics[width=8cm,clip]{5-7.eps}
 \end{center}
 \caption{ユースケースの例，ReportEmergency(一列形式)}
 \end{figure}
@@ -345,11 +335,13 @@ ReportEmergencyユースケース(図5-7)
 時間がかかる．%for対して？
 一般にAbbottのヒューリスティックは，
 シナリオやユースケースのイベントフローなど短い記述から
-最初の候補オブジェクトのリストを生成するのに%候補オブジェクト？
+最初の候補オブジェクトのリストを生成するのに%エンティティの候補オブジェクト？
 有効に働く．
 次のヒューリスティックはAbbottのヒューリスティックと組合せて
 使用されることがある．
-
+\begin{itemize}
+ \item 
+\end{itemize}
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%表っぽいの作る
@@ -361,11 +353,11 @@ ReportEmergencyユースケース(図5-7)
 が使う名前で始めることが推奨される．
 オブジェクトの記述により，
 開発者は使用する概念を明確化し，誤解を避けることができる．
-分析モデルが決定していない間は，
+分析モデルが安定していない間は，
 開発者はオブジェクトや属性を詳細化するのに
 多くの時間を費やす必要はない．
 属性や責任が明らかでない場合はそれらを文書化するべきである．
-それらのオブジェクトが変更される間に繰り返しがたくさんあるかもしれないが，一旦分析モデルが決定すれば，
+それらのオブジェクトが変更される間に繰り返しがたくさんあるかもしれないが，一旦分析モデルが安定すれば，
 各オブジェクトの記述は必要な限り詳細であるべきである(5.4.11節参照)．
 %%%%%%%%%%%%%%%%%%%%p.182%%%%%%%%%%%%%%%%%%%%
 例えば，ReportEmergencyユースケース(図5-7)の最初の調査後には，%検査？examination
@@ -373,8 +365,8 @@ ReportEmergencyユースケース(図5-7)
 Dispatcher，EmergencyReport，FieldOfficer，Incidentオブジェクトを
 特定するためにユーザの意見を聞いている．
 EmergencyReportオブジェクトはReportEmergencyユースケースにおいて
-名前によって明示的に言及されていないことに注意する．
-ユースケースの4.は「FieldOfficerが提出した情報」のような緊急通報
+名前によって明示的に言及されていない．
+ユースケースのステップ4は「FieldOfficerが提出した情報」のような緊急通報
 を指す．
 顧客のレビュー後，この情報は通常「緊急通報」を指すことに気づき，
 対応するEmergencyReportオブジェクトに名前を付けることを決定する．
@@ -382,7 +374,7 @@ EmergencyReportオブジェクトはReportEmergencyユースケースにおいて
 エンティティオブジェクトの定義は表5-2で述べた
 最初の分析モデルにつながる．
 このモデルはReportEmergencyユースケースを実装した
-システムの完璧な記述には程遠いことに注意する．
+システムの完璧な記述には程遠い．
 次節ではバウンダリオブジェクトの識別について述べる．
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -392,7 +384,7 @@ EmergencyReportオブジェクトはReportEmergencyユースケースにおいて
 \begin{table}[t]
 \caption{ReportEmergencyユースケースのエンティティオブジェクト}
 \center
-\includegraphics[width=6cm,clip]{t5-2.eps}
+\includegraphics[width=8cm,clip]{t5-2.eps}
 \end{table}
 
 \subsubsection{バウンダリオブジェクトの識別}%5.4.2節 %identify確認？
@@ -404,8 +396,7 @@ EmergencyReportオブジェクトはReportEmergencyユースケースにおいて
 が使用できる形式に変換する．
 
 バウンダリオブジェクトは，粗いレベルでユーザインタフェースをモデル化する．
-
-それらはユーザインタフェースの視覚的な側面を詳細に記述していない．
+それらはユーザインタフェースの視覚的な側面を詳細には記述していない．
 まず開発者は，より簡単にスケッチやモックアップで
 ユーザインタフェースの詳細を話し合う．
 %%%%%%%%%%%%%%%%%%%%p.183%%%%%%%%%%%%%%%%%%%%
@@ -414,6 +405,9 @@ EmergencyReportオブジェクトはReportEmergencyユースケースにおいて
 ユーザビリティテストの結果とともに発展し続ける．
 すべてのユーザインタフェースを変更するために
 分析モデルを更新するのは時間がかかり，大した利益はもたらさない．
+\begin{itemize}
+ \item 
+\end{itemize}
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%表っぽいの作る
@@ -434,7 +428,7 @@ ReportEmergencyユースケースを検査することで，%検査？examine
 
 %%%%%%%%%%%%%%%%%%%%p.184%%%%%%%%%%%%%%%%%%%%
 IncidentFormはReportEmergencyユースケース内で
-はっきり場所を言及できるものではないことに注意する．
+はっきり場所を言及できるものではない．
 ここではDispatcherがFieldOfficerの提出した緊急レポートを見て，
 確認応答を返送するためのインタフェースを必要としているのを
 観察することによって，このオブジェクトを特定した．
@@ -476,6 +470,9 @@ FieldOfficerStationやDispatcherStationが実際に
 この決定はシステムの設計作業の時点まで延期されてきた可能性がある．
 一方で，分析モデルにおいてこの概念を可視化することで，
 例外動作に集中できる．
+\begin{itemize}
+ \item 
+\end{itemize}
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%表っぽいの作る
@@ -500,7 +497,7 @@ ReportEmergencyユースケースをモデル化する際，
 \begin{table}[t]
 \caption{ReportEmergencyユースケースのコントロールオブジェクト}
 \center
-\includegraphics[width=6cm,clip]{t5-4.eps}
+\includegraphics[width=8cm,clip]{t5-4.eps}
 \end{table}
 
 
@@ -551,7 +548,7 @@ ReportEmergencyControlクラスにcreateメッセージを送信する．
 %例えば
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-8.eps}
+\includegraphics[width=8cm,clip]{5-8.eps}
 \end{center}
 \caption{ReportEmergencyユースケースのシーケンス図}%forだけど「の」って訳していいのか？
 \end{figure}
@@ -580,14 +577,14 @@ Acknowledgmentの存在に言及するだけで，
 %%%%%%%%%%%%%%%%%%%%p.187%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-9.eps}
+\includegraphics[width=8cm,clip]{5-9.eps}
 \end{center}
 \caption{ReportEmergencyユースケースのシーケンス図(図5-8の続き)}
 \end{figure}
 %
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-10.eps}
+\includegraphics[width=8cm,clip]{5-10.eps}
 \end{center}
 \caption{ReportEmergencyユースケースのシーケンス図(図5-9の続き)}
 \end{figure}
@@ -609,13 +606,13 @@ ReportEmergencyユースケースは
 これらのオペレーションは，与えられたオブジェクトが関連する
 任意のユースケースによって共有される．
 2つ以上のユースケース間で共有されるオブジェクトの定義は
-同一でなければならないことに注意する．
+同一でなければならない．
 オペレーションが複数のシーケンス図に現れていれば，
 その振る舞いは同じであるべきである．
 %%%%%%%%%%%%%%%%%%%%p.188%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-11.eps}
+\includegraphics[width=8cm,clip]{5-11.eps}
 \end{center}
 \caption{正確なReportEmergencyユースケース}%正確な？Refind
 \end{figure}
@@ -627,11 +624,11 @@ ReportEmergencyユースケースは
 \begin{table}[t]
 \caption{ReportEmergencyユースケースのAcknowledgmentオブジェクト}
 \center
-\includegraphics[width=6cm,clip]{t5-5.eps}
+\includegraphics[width=8cm,clip]{t5-5.eps}
 \end{table}
 ユースケース間でのオペレーションの共有によって
 開発者は要求仕様の冗長性を除去し，一貫性を向上できる．
-明快さは常に冗長性の排除に優先することに注意する．
+明快さは常に冗長性の排除に優先する．
 多くのオペレーション間の振る舞いを断片化すること，
 要求仕様が不必要に複雑になる．
 
@@ -650,6 +647,9 @@ ReportEmergencyユースケースは
 には見えないかもしれないが，
 これはいくつかの重要な決定を見逃すのを
 避けるためにも実行されるべきである．
+\begin{itemize}
+ \item 
+\end{itemize}
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%表っぽいの作る
@@ -680,7 +680,7 @@ CRCカードは
 インスタンスごとに1つのカードが表に置かれる．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-12.eps}
+\includegraphics[width=8cm,clip]{5-12.eps}
 \end{center}
 \caption{ReportEmergencyControlとインシデントクラスのCRCカードの例}%インシデントクラス？？？？
 \end{figure}
@@ -696,7 +696,7 @@ CRCカードは作成と変更がより容易であるため，
 オブジェクトの構築を洗練させ繰り返す
 開発者のグループにとっては良いツールである．
 
-\subsubsection{関連の定義}%5.4.6節 %idenify？特定？定義？
+\subsubsection{関連の識別}%5.4.6節 %idenify？特定？定義？
 開発者は，シーケンス図によって時間に伴うオブジェクト間の相互作用を%over time伴う？
 表現できる一方で，クラス図によってオブジェクトの依存関係を記述できる．
 UMLクラス図の表記法を2章で記述し，
@@ -725,7 +725,7 @@ UMLクラス図の表記法を2章で記述し，
 %
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-13.eps}
+\includegraphics[width=8cm,clip]{5-13.eps}
 \end{center}
 \caption{EmergencyReportクラスとFieldOfficerクラス間の関係の例}
 \end{figure}
@@ -739,6 +739,9 @@ Abbottのヒューリスティック(表5-1)によると，
 関連は状態を表す動詞や動詞句を調べることで識別できる．
 すべての関連は名前を付けられるべきであり，役割はそれぞれの
 終端に割り当てられる必要がある．
+\begin{itemize}
+ \item 
+\end{itemize}
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%表っぽいの作る
@@ -769,13 +772,12 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 %%%%%%%%%%%%%%%%%%%%p.192%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-14.eps}
+\includegraphics[width=8cm,clip]{5-14.eps}
 \end{center}
 \caption{冗長な関連を削除}
 \end{figure}
 
-\subsubsection{集約の定義}%5.4.7節 %idenify？特定？
-
+\subsubsection{集約の識別}%5.4.7節 %idenify？特定？
 集約は，全体と部分の関係を表す関連の特殊なタイプである．
 %例えばFireStationはいくつかのFireFighters，FireEngines，Ambulances，LeadCarで構成されている．国家は順番にいくつかの国？となんたら
 集約には，コンポジションと共有の2種類がある．
@@ -784,7 +786,7 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 白いひし形は共有関係であり，全体や部分が独立して存在できる．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-15.eps}
+\includegraphics[width=8cm,clip]{5-15.eps}
 \end{center}
 \caption{集約とコンポジションの例(UMLクラス図)}
 \end{figure}
@@ -814,7 +816,7 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 %例とか
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-16.eps}
+\includegraphics[width=8cm,clip]{5-16.eps}
 \end{center}
 \caption{EmergencyReportクラスの属性}
 \end{figure}
@@ -839,7 +841,7 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 属性の候補である．
 
 属性はオブジェクトモデルの安定した部分のうち
-最小のものを表現することに注意する．
+最小のものを表現する．
 
 システムがユーザに評価される開発後期に，
 属性はしばしば発見されたり追加されたりする．
@@ -852,6 +854,9 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 開発者は過度のリソースを費やす必要はない．
 分析モデルやユーザインタフェースのスケッチを確認する際に
 これらの属性は後で追加することができる．
+\begin{itemize}
+ \item 
+\end{itemize}
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%表っぽいの作る
@@ -884,7 +889,7 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 %例
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-17.eps}
+\includegraphics[width=8cm,clip]{5-17.eps}
 \end{center}
 \caption{IncidentのUMLステートマシン}
 \end{figure}
@@ -897,12 +902,12 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 %例．アブストラクトとかあるしやった方がいいかなぁ
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-18.eps}
+\includegraphics[width=8cm,clip]{5-18.eps}
 \end{center}
 \caption{継承関係の例(UMLクラス図)}
 \end{figure}
 
-\subsubsection{分析モデルの再調査}%5.4.11節 %review 再調査
+\subsubsection{分析モデルの見直し}%5.4.11節 %review 再調査
 分析モデルは段階的に反復して構築され，
 最初の時点では正しいことも，完成していることさえめったにない．
 開発者によって設計や実装のための
@@ -998,7 +1003,7 @@ IncidentやReportは数字を割り振られ日付ごとに記録される．
 維持する必要がある．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-19.eps}
+\includegraphics[width=8cm,clip]{5-19.eps}
 \end{center}
 \caption{分析作業(UMLアクティビティ図)}
 \end{figure}
@@ -1083,7 +1088,7 @@ RADの改訂履歴の節では，
 変更履歴を提供する．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-20.eps}
+\includegraphics[width=8cm,clip]{5-20.eps}
 \end{center}
 \caption{RADのアウトラインの概要．詳細は図4-16}
 \end{figure}
@@ -1221,7 +1226,7 @@ RADの改訂履歴の節では，
 図5-21は優先方式の例である．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-21.eps}
+\includegraphics[width=8cm,clip]{5-21.eps}
 \end{center}
 \caption{要求の優先方式の一例}
 \end{figure}
@@ -1235,7 +1240,7 @@ RADの改訂履歴の節では，
 図5-22は変更が設計され実装前に顧客に見直された場合のより複雑な例を示している．
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=6cm,clip]{5-22.eps}
+\includegraphics[width=8cm,clip]{5-22.eps}
 \end{center}
 \caption{改訂プロセスの例(UMLアクティビティ図)}
 \end{figure}
